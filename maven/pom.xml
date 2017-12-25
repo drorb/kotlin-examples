@@ -7,11 +7,24 @@
 
     <groupId>org.jetbrains.kotlin</groupId>
     <artifactId>kotlin-examples</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>hello-world</module>
         <module>mixed-code-hello-world</module>
     </modules>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>kotlin-releases</name>
+            <url>http://localhost:8081/artifactory/kotlin-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>kotlin-snapshots</name>
+            <url>http://localhost:8081/artifactory/kotlin-local-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
